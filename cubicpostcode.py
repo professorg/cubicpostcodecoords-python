@@ -18,9 +18,9 @@ def loop(n):
     if n < 1:
         return
     # Integer division to find layer
-    layer = n // CUBESPERLAYER
+    layer = (n + 1) // CUBESPERLAYER
     # Mod to find remainder
-    remainder = n % CUBESPERLAYER
+    remainder = (n - 1) % CUBESPERLAYER + 1
     # Largest even square less than remainder
     last_sqrt = int(floor(sqrt(remainder - 1)))
     last_even_sqrt_index = last_sqrt // 2       # The "n"th even square (0=0th, 4=1st)
